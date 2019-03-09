@@ -11,10 +11,10 @@ set('default_stage', function () {
 });
 
 // Return current instance name. Based on that scripts knows from which server() takes the data to database operations.
-set('current_instance', function () {
+set('current_stage', function () {
     return (new Instance)->getCurrentInstance();
 });
 
-set('source_instance', function () {
+set('target_stage', function () {
     return !empty(input()->getArgument('stage')) ? input()->getArgument('stage') : get('default_stage');
 });
