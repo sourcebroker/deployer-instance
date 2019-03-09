@@ -1,5 +1,7 @@
 <?php
 
+namespace Deployer;
+
 use SourceBroker\DeployerInstance\Instance;
 
 // Deployer standard settings. By setting 'default_stage' you can do 'dep db:backup' instead of 'dep db:backup local'
