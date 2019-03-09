@@ -14,3 +14,7 @@ set('default_stage', function () {
 set('current_instance', function () {
     return (new Instance)->getCurrentInstance();
 });
+
+set('source_instance', function () {
+    return !empty(input()->getArgument('stage')) ? input()->getArgument('stage') : get('default_stage');
+});
