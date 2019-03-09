@@ -1,0 +1,23 @@
+{
+  "name": "sourcebroker/deployer-instance",
+  "description": "Instance management for deployer.",
+  "license": "MIT",
+  "keywords": [
+    "deployer"
+  ],
+  "require": {
+    "deployer/deployer": "^4.3.0",
+    "symfony/dotenv": "^3.3.0 || ^4.0"
+  },
+  "authors": [
+    {
+      "name": "Krystian Szymukowicz",
+      "email": "k.szymukowicz@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "SourceBroker\\DeployerInstance\\": "src/"
+    }
+  }
+}
