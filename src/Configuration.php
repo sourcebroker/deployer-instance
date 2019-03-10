@@ -24,7 +24,7 @@ class Configuration
             $server = Deployer::get()->servers[$name];
         } catch (\RuntimeException $e) {
             throw new \RuntimeException('Name of instance "' . $name . '" is not on the environments list:' .
-                implode(',', array_keys(Deployer::get()->environments)) . "\n" . 'Please check case sensitive.',
+                implode(',', array_keys(Deployer::get()->servers)) . "\n" . 'Please check case sensitive.',
                 1500717628491);
         }
         return $server;
