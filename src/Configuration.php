@@ -4,7 +4,6 @@ namespace SourceBroker\DeployerInstance;
 
 use Deployer\Deployer;
 use Deployer\Host\Host;
-use function Deployer\on;
 
 class Configuration
 {
