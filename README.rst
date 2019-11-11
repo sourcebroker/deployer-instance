@@ -6,9 +6,8 @@ deployer-instance
 What does it do?
 ----------------
 
-Library that allows to manage instances for deployer.
-
-**NOTE! Its tested only with Deployer 4.3.1!**
+Library with some helper methods to manage instances for deployer.
+Used by deployer-extended, deployer-extended-media and deployer-extended-database.
 
 
 Changelog
