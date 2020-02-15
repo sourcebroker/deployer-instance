@@ -7,7 +7,7 @@ master
 
 a) [TASK][BREAKING] Rename getCurrentInstance to getLocalInstance
 b) [FEATURE] AddConfiguration->getLocalHost method.
-
+c) [TASK][BREAKING] Refactor on default vars.
 
 2.0.0
 ~~~~~
