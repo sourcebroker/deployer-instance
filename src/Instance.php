@@ -4,7 +4,7 @@ namespace SourceBroker\DeployerInstance;
 
 class Instance
 {
-    public function getCurrentInstance()
+    public function getLocalInstance()
     {
         if (getenv('INSTANCE') === false) {
             $configFile = getcwd() . '/.env';
@@ -15,7 +15,7 @@ class Instance
             }
             if (getenv('INSTANCE') === false) {
                 throw new \Exception('INSTANCE var is no set. Please
-            set one of them with the name of INSTANCE which should corenspond to server() name.', 1500717953824);
+            set one of them with the name of INSTANCE which should corresponds to host() name.', 1500717953824);
             }
         }
         return getenv('INSTANCE');
