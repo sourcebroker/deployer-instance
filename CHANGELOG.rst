@@ -2,7 +2,7 @@
 Changelog
 ---------
 
-master
+3.0.0
 ~~~~~
 
 a) [TASK][BREAKING] Rename getCurrentInstance to getLocalInstance
