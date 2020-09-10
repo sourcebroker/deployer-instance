@@ -2,6 +2,8 @@
 
 namespace SourceBroker\DeployerInstance;
 
+use Symfony\Component\Dotenv\Dotenv;
+
 class Instance
 {
     public function getLocalInstance()
@@ -9,7 +11,13 @@ class Instance
         if (getenv('INSTANCE') === false) {
             $configFile = getcwd() . '/.env';
             if (file_exists($configFile)) {
-                (new \Symfony\Component\Dotenv\Dotenv())->load($configFile);
+                $dotEnv = new Dotenv();
+                if (method_exists($dotEnv, 'loadEnv')) {
+                    // Symfony => 4.2 style
+                    $dotEnv->loadEnv($configFile);
+                } else {
+                    $dotEnv->load($configFile);
+                }
             } else {
                 throw new \Exception('Missing file "' . $configFile . '"', 1500717945887);
             }
