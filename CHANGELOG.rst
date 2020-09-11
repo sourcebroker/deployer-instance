@@ -2,8 +2,8 @@
 Changelog
 ---------
 
-master
-~~~~~~
+3.1.0
+~~~~~
 
 a) [FEATURE] Use loadEnv function from Symfony\Dotenv if possible.
 
