@@ -2,6 +2,11 @@
 Changelog
 ---------
 
+3.2.0
+~~~~~
+
+a) [TASK] Increase `symfony/dotenv` version.
+
 3.1.0
 ~~~~~
 
