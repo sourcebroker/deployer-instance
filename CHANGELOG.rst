@@ -2,8 +2,8 @@
 Changelog
 ---------
 
-master
-~~~~~~
+4.0.0
+~~~~~
 
 a) [TASK] Add Env class with load() / get() methods.
 b) [TASK][BREAKING] Remove class Instance with public method getLocalInstance. Use `(new Env())->get('INSTANCE');` instead.
