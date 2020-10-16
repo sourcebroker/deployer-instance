@@ -2,6 +2,7 @@
 
 namespace SourceBroker\DeployerInstance;
 
+use RuntimeException;
 use Symfony\Component\Dotenv\Dotenv;
 
 class Env
@@ -25,7 +26,7 @@ class Env
                 }
                 self::$envLoaded = true;
             } else {
-                throw new \RuntimeException('Missing config file. Searching in: '
+                throw new RuntimeException('Missing config file. Searching in: '
                     . "\n" . $configFile, 1500717945887);
             }
         }
@@ -34,13 +35,9 @@ class Env
     /**
      * @param string $envName
      * @return mixed|null
-     * @throws \Exception
      */
     public function get(string $envName)
     {
-        if (!self::$envLoaded) {
-            $this->load();
-        }
         return $_ENV[$envName] ?? null;
     }
 }

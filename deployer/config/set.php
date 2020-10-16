@@ -2,12 +2,15 @@
 
 namespace Deployer;
 
+use RuntimeException;
 use SourceBroker\DeployerInstance\Env;
 
 set('default_stage', function () {
-    $instance = (new Env())->get('INSTANCE');
+    $env = new Env();
+    $env->load();
+    $instance = $env->get('INSTANCE');
     if ($instance === null) {
-        throw new \RuntimeException(
+        throw new RuntimeException(
             'INSTANCE var is no set.',
             1602784218
         );
