@@ -8,6 +8,7 @@ master
 a) [TASK] Add Env class with load() / get() methods.
 b) [TASK][BREAKING] Remove class Instance with public method getLocalInstance. Use `(new Env())->get('INSTANCE');` instead.
 c) [TASK] Change getenv to $_ENV as default for symfony/dotenv.
+d) [TASK] Add ddev config.
 
 3.2.0
 ~~~~~
