@@ -2,6 +2,12 @@
 Changelog
 ---------
 
+
+4.0.1
+~~~~~
+
+a) [BUGFIX] Fix compatibility with symfony/dotenv 4.x where $envKey must be a string.
+
 4.0.0
 ~~~~~
 
