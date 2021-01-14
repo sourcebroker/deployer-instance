@@ -2,6 +2,10 @@
 Changelog
 ---------
 
+4.0.2
+~~~~~
+
+a) [BUGFIX] Add compatibility with PHP 7.0.
 
 4.0.1
 ~~~~~
