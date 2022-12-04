@@ -6,7 +6,7 @@ master
 ~~~~~~
 
 a) [TASK] Refactor for Deployer 7.
-
+b) [TASK] Update dependencies to Deployer 7.
 
 4.0.2
 ~~~~~
