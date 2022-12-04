@@ -13,7 +13,7 @@ class Env
      * @param string|null $configFile
      * @param string|null $envKey
      */
-    public function load(string $configFile = null, $envKey = 'APP_ENV')
+    public function load(string $configFile = null, ?string $envKey = 'APP_ENV'): void
     {
         if (self::$envLoaded === false) {
             $configFile = $configFile ?? getcwd() . '/.env';
