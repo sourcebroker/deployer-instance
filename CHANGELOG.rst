@@ -2,8 +2,8 @@
 Changelog
 ---------
 
-master
-~~~~~~
+5.0.0
+~~~~~
 
 a) [TASK] Refactor for Deployer 7.
 b) [TASK] Update dependencies to Deployer 7.
