@@ -13,10 +13,10 @@ class Env
      * @param string|null $configFile
      * @param string|null $envKey
      */
-    public function load(string $configFile = null, ?string $envKey = 'APP_ENV'): void
+    public function load(?string $configFile = null, ?string $envKey = null): void
     {
         if (self::$envLoaded === false) {
-            $configFile = $configFile ?? getcwd() . '/.env';
+            $configFile = $configFile ?? $this->projectRootAbsolutePath() . '/.env';
             if (file_exists($configFile)) {
                 $dotEnv = new Dotenv();
                 if (method_exists($dotEnv, 'loadEnv')) {
@@ -33,11 +33,23 @@ class Env
     }
 
     /**
-     * @param string $envName
      * @return mixed|null
      */
     public function get(string $envName)
     {
         return $_ENV[$envName] ?? null;
+    }
+
+    public function projectRootAbsolutePath(): string
+    {
+        $dir = __DIR__;
+        while ((!is_file($dir . '/composer.json') && !is_file($dir . '/root_dir') && !is_file($dir . '/deploy.php')) || basename($dir) === 'deployer-instance') {
+            if ($dir === \dirname($dir)) {
+                break;
+            }
+            $dir = \dirname($dir);
+        }
+
+        return $dir;
     }
 }

@@ -2,6 +2,11 @@
 Changelog
 ---------
 
+6.0.0
+~~~~~
+
+a) [BREAKING] Possible breaking because change of the way the .env path is determined.
+
 5.0.0
 ~~~~~
 
