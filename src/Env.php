@@ -16,19 +16,19 @@ class Env
     public function load(?string $configFile = null, ?string $envKey = null): void
     {
         if (self::$envLoaded === false) {
+            $dotEnv = new Dotenv();
             $configFile = $configFile ?? $this->projectRootAbsolutePath() . '/.env';
             if (file_exists($configFile)) {
-                $dotEnv = new Dotenv();
                 if (method_exists($dotEnv, 'loadEnv')) {
                     $dotEnv->loadEnv($configFile, $envKey);
                 } else {
                     $dotEnv->load($configFile);
                 }
-                self::$envLoaded = true;
             } else {
-                throw new RuntimeException('Missing config file. Searching in: '
-                    . "\n" . $configFile, 1500717945887);
+                $env = getenv();
+                $dotEnv->populate($env);
             }
+            self::$envLoaded = true;
         }
     }
 
