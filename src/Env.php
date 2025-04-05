@@ -2,17 +2,12 @@
 
 namespace SourceBroker\DeployerInstance;
 
-use RuntimeException;
 use Symfony\Component\Dotenv\Dotenv;
 
 class Env
 {
     protected static $envLoaded = false;
 
-    /**
-     * @param string|null $configFile
-     * @param string|null $envKey
-     */
     public function load(?string $configFile = null, ?string $envKey = null): void
     {
         if (self::$envLoaded === false) {
