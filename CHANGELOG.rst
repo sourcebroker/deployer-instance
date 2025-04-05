@@ -2,6 +2,12 @@
 Changelog
 ---------
 
+7.0.0
+~~~~~
+
+a) [BREAKING] Possible breaking change. If no .env file is available (e.g. in docker setup), use the variables from environment.
+
+
 6.0.0
 ~~~~~
 
