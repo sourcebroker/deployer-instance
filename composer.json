@@ -6,7 +6,7 @@
 		"deployer"
 	],
 	"require": {
-		"deployer/deployer": "^7.0.0",
+		"deployer/deployer": "^7.0.0 || ^8.0.0",
 		"symfony/dotenv": "^3.3 || ^4 || ^5 || ^6 || ^7"
 	},
 	"authors": [
